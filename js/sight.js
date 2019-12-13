@@ -10,6 +10,10 @@ class SVGElement {
       this.node.setAttributeNS(null, key, value);
     }
     return this;
-   
+  }
+  append(element){
+    const parent = (typeof element === 'string') ? document.querySelector(element) : element.node;
+    parent.appendChild(this.node);
+    return this;
   }
 }
