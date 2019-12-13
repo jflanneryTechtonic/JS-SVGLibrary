@@ -5,4 +5,11 @@ class SVGElement {
     this.node = document.createElementNS(this.namespace, this.type);
     return this;
   }
+  attr(attrs){
+    for(const [key, value] of Object.entries(attrs)){
+      this.node.setAttribute(null, key, value);
+    }
+    return this;
+   
+  }
 }
